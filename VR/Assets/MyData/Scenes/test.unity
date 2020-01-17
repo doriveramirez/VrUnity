@@ -147,7 +147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.69, y: -0.3}
+  m_AnchoredPosition: {x: -0.42, y: -0.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &167035380
@@ -531,7 +531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69, y: -0.3}
+  m_AnchoredPosition: {x: 0.41, y: -0.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &381054465
@@ -1605,7 +1605,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208735388}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1
@@ -1879,6 +1879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1752485804}
   - component: {fileID: 1752485805}
+  - component: {fileID: 1752485806}
   m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
@@ -1920,6 +1921,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canGrab: 0
+--- !u!65 &1752485806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752485803}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9759977, y: 1, z: 1.3077374}
+  m_Center: {x: -0.1458857, y: 0, z: 0.15386868}
 --- !u!1001 &2042143257
 PrefabInstance:
   m_ObjectHideFlags: 0

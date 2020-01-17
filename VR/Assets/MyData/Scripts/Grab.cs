@@ -31,7 +31,7 @@ public class Grab : MonoBehaviour
             {
                 ballCol.isTrigger = true;
                 ball.transform.SetParent(hand.transform);
-                ball.transform.localPosition = new Vector3(0f, -.672f, 1.5f);
+                ball.transform.localPosition = new Vector3(0f, 0f, 1f);
                 ballRb.velocity = Vector3.zero;
                 ballRb.useGravity = false;
                 inHands = true;
