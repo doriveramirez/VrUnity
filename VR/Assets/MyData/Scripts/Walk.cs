@@ -6,6 +6,8 @@ public class Walk : MonoBehaviour
 {
 
     public int playerSpeed;
+    public GameObject wall;
+    public int count;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +22,19 @@ public class Walk : MonoBehaviour
         {
             transform.position = transform.position + Camera.main.transform.forward * playerSpeed * Time.deltaTime;
         }
+        if (count == 4)
+        {
+            wall.SetActive(false);
+        }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            count++;
+        }
+    }
+
 }

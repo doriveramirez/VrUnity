@@ -27,7 +27,7 @@ public class Grab : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse2))
         {
-            if (!inHands)
+            if (!inHands && hand.GetComponent<Handgrab>().canGrab)
             {
                 ballCol.isTrigger = true;
                 ball.transform.SetParent(hand.transform);
