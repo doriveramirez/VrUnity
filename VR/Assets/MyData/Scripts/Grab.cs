@@ -8,8 +8,11 @@ public class Grab : MonoBehaviour
     public GameObject ball;
     public GameObject hand;
     public float handPower;
+    public static Grab instance;
+    public bool taken = false;
 
     bool inHands = false;
+    
     Collider ballCol;
     Rigidbody ballRb;
     Camera cam;
@@ -20,12 +23,13 @@ public class Grab : MonoBehaviour
         ballCol = ball.GetComponent<SphereCollider>();
         ballRb = ball.GetComponent<Rigidbody>();
         cam = GetComponentInChildren<Camera>();
+        instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse2))
+        if (taken)
         {
             if (!inHands && hand.GetComponent<Handgrab>().canGrab)
             {

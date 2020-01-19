@@ -7,6 +7,12 @@ TagManager:
   - Ball
   - Coin
   - Teleport
+  - Right
+  - Left
+  - Forward
+  - Back
+  - Stop
+  - Pedestal
   layers:
   - Default
   - TransparentFX

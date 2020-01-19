@@ -8,8 +8,7 @@ public class Stop : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            Debug.Log("hola");
-            gameObject.GetComponent<MoveRight>().movement = false;
+            Walk.instance.teleport = false;
         }
     }
 }

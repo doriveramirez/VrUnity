@@ -238,3 +238,6 @@ E:\Tarde\Clase\VrUnity\VR\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cach
 E:\Tarde\Clase\VrUnity\VR\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 E:\Tarde\Clase\VrUnity\VR\obj\Debug\Assembly-CSharp.dll
 E:\Tarde\Clase\VrUnity\VR\obj\Debug\Assembly-CSharp.pdb
+D:\Documentos\VrUnity\VR\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Documentos\VrUnity\VR\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\Documentos\VrUnity\VR\obj\Debug\Assembly-CSharp.dll
