@@ -36,6 +36,10 @@ public class VRGaze : MonoBehaviour
             {
                 _hit.transform.gameObject.GetComponent<Teleport>().TeleportPlayer();
             }
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Right"))
+            {
+                _hit.transform.gameObject.GetComponent<MoveRight>().MoveToRight();
+            }
         }
     }
 

@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/MyData/Scenes/test.unity
+- path: Assets/MyData/Scenes/Menu.unity
   isLoaded: 1
   isActive: 1
+  isSubScene: 0
