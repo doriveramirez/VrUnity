@@ -5,24 +5,24 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
 
-    private GameObject player2;
-    GameObject[] balls;
-    public static Ball instance;
+    public GameObject hand;
+    public GameObject ball;
+
+    Collider ballCol;
+    Rigidbody ballRb;
 
     void Start()
     {
-        player2 = GameObject.FindGameObjectWithTag("Player");
-        balls = GameObject.FindGameObjectsWithTag("Ball");
-        instance = this;
+        ballCol = ball.GetComponent<SphereCollider>();
+        ballRb = ball.GetComponent<Rigidbody>();
     }
 
-    public GameObject GetBall()
+    public void getBall()
     {
-        foreach (GameObject ball in balls)
-        {
-            Debug.Log(ball.transform.position.x);
-            return ball;
-        }
-        return null;
+        ball.transform.SetParent(hand.transform);
+        ballCol.isTrigger = false;
+        ball.transform.localPosition = new Vector3(-2.816319e-06f, -0.1810183f, 0.4845861f);
+        ballRb.useGravity = false;
     }
+
 }

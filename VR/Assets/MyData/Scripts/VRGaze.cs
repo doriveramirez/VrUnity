@@ -62,7 +62,11 @@ public class VRGaze : MonoBehaviour
             }
             if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Ball"))
             {
-                Grab.instance.taken = true;
+                _hit.transform.gameObject.GetComponent<Ball>().getBall();
+            }
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Pedestal"))
+            {
+                _hit.transform.gameObject.GetComponent<Pedestal>().PutBall();
             }
         }
     }
