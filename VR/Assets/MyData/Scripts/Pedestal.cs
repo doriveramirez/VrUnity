@@ -11,13 +11,14 @@ public class Pedestal : MonoBehaviour
 
     Collider ballCol;
     Rigidbody ballRb;
-
+    Renderer portalMaterial;
+    bool portalActivated = false;
 
     void Start()
     {
         ballCol = ball.GetComponent<SphereCollider>();
         ballRb = ball.GetComponent<Rigidbody>();
-        var portalMaterial = portal.GetComponent<Renderer>();
+        portalMaterial = portal.GetComponent<Renderer>();
     }
 
     public void PutBall()
@@ -26,5 +27,7 @@ public class Pedestal : MonoBehaviour
         ballCol.isTrigger = false;
         ballRb.useGravity = false;
         ball.transform.localPosition = new Vector3(0f, 1f, 0f);
+        portalMaterial.material.SetColor("_Color", Color.white);
+        portalActivated = true;
     }
 }

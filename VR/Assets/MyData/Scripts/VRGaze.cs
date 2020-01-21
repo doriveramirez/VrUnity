@@ -68,6 +68,10 @@ public class VRGaze : MonoBehaviour
             {
                 _hit.transform.gameObject.GetComponent<Pedestal>().PutBall();
             }
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Portal"))
+            {
+                _hit.transform.gameObject.GetComponent<Portal>().GoPortal();
+            }
         }
     }
 
