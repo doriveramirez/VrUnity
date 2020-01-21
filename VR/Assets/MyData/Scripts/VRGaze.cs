@@ -72,28 +72,24 @@ public class VRGaze : MonoBehaviour
             {
                 _hit.transform.gameObject.GetComponent<Portal>().GoPortal();
             }
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Endgame"))
+            {
+                _hit.transform.gameObject.GetComponent<Endgame>().End();
+            }
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Start"))
+            {
+                _hit.transform.gameObject.GetComponent<MenuController>().ChangeScene("01");
+            }
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Exit"))
+            {
+                _hit.transform.gameObject.GetComponent<MenuController>().QuitApp();
+            }
         }
     }
 
     public void GVROn()
     {
         gvrStatus = true;
-        //foreach (GameObject right in rights)
-        //{
-        //    if (transform.position.x <= right.transform.position.x && transform.position.x > right.transform.position.x - 1)
-        //    {
-        //        if (transform.position.z >= right.transform.position.z & transform.position.z < right.transform.position.z + 1)
-        //        gvrStatus = true;
-        //    }
-        //}
-        //foreach (GameObject left in lefts)
-        //{
-        //    if (transform.position.x >= left.transform.position.x && transform.position.x < left.transform.position.x + 1)
-        //    {
-        //        if (transform.position.z >= left.transform.position.z & transform.position.z < left.transform.position.z + 1)
-        //            gvrStatus = true;
-        //    }
-        //}
     }
 
     public void GVROff()

@@ -26,7 +26,7 @@ public class Pedestal : MonoBehaviour
         ball.transform.SetParent(pedestal.transform);
         ballCol.isTrigger = false;
         ballRb.useGravity = false;
-        ball.transform.localPosition = new Vector3(0f, 1f, 0f);
+        ball.transform.localPosition = new Vector3(0f, 0.6f, 0f);
         portalMaterial.material.SetColor("_Color", Color.white);
         portalActivated = true;
     }
