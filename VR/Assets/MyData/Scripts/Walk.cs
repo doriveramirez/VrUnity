@@ -33,12 +33,10 @@ public class Walk : MonoBehaviour
     {
         if (direction == "right" && teleport == true)
         {
-            Debug.Log("se está haciendo");
             transform.Translate(1 * playerSpeed * Time.deltaTime, 0, 0);
         }
         if (direction == "left" && teleport == true)
         {
-            Debug.Log("pasa");
             transform.Translate(-1 * playerSpeed * Time.deltaTime, 0, 0);
         }
         if (direction == "forward" && teleport == true)

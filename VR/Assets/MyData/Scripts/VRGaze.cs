@@ -78,7 +78,7 @@ public class VRGaze : MonoBehaviour
             }
             if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Start"))
             {
-                _hit.transform.gameObject.GetComponent<MenuController>().ChangeScene("01");
+                _hit.transform.gameObject.GetComponent<MenuController>().ChangeScene();
             }
             if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("Exit"))
             {
